@@ -15,14 +15,14 @@ Role Variables
 --------------
 
 ### dynatrace (dt) variables
-dt_metrics_ingest_url: http://localhost:14499/metrics/ingest
-dt_metrics_group: default
-dt_metrics_name: default
+* dt_metrics_ingest_url: http://localhost:14499/metrics/ingest -> http endpoint for OneAgent metric API
+* dt_metrics_group: default -> metric group (ansible.group-name.metric-name)
+* dt_metrics_name: default -> metric name (ansible.group-name.metric-name)
 ### ansible (awx) variables
-awx_job_type: default
-awx_job_id: 0
-awx_job_template: default
-awx_job_launch_type: default
+* awx_job_type: default -> the type of job (i.e. deployment, change, configuration, patching, etc) used for reporting
+* awx_job_id: 0 -> the id of the job
+* awx_job_template: default -> the job template
+* awx_job_launch_type: default -> the method in which the job was launched
 
 Dependencies
 ------------
@@ -38,10 +38,6 @@ Including an example of how to use your role (for instance, with variables passe
       roles:
          - { role: username.rolename, x: 42 }
 
-License
--------
-
-BSD
 
 Author Information
 ------------------
