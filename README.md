@@ -8,8 +8,8 @@ Requirements
 
 * Works on Linux and Windows target hosts.
 * Requires only the (native) uri or win_uri modules.
-* Dynatrace OneAgent v1.201+
-* OneAgent metric API enabled on target hosts.
+* [Dynatrace OneAgent](https://www.dynatrace.com/support/help/shortlink/release_notes#oneagent) v1.201+
+* [OneAgent metric API](https://www.dynatrace.com/support/help/shortlink/local-api) enabled on target hosts.
 
 Role Variables
 --------------
