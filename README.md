@@ -35,9 +35,18 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+---
+- name: test ansible metrics # playbook name
+  hosts: localhost # target hosts
+  tasks: # playbook tasks
+     -
+       name: my task name # task name
+       include_role:
+         name: dynatrace-ansible-metrics-role # name of included role
+       vars: # variables to pass
+         dt_metrics_group: my-group # name of metric group
+         dt_metrics_name: jobs.started # name of metric
+         dt_metrics_value: 5 # value of metric
 
 
 Author Information
