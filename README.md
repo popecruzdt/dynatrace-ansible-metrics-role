@@ -1,22 +1,33 @@
-Role Name
+dynatrace-ansible-metrics-role
 =========
 
-A brief description of the role goes here.
+This role enables you to send metrics about Ansible (Tower) job/playbook execution to Dynatrace.  Add the role as tasks within your playbook and specify the metric group and metric name as variables.  Use this to monitor Ansible job executions, failures, changes, deployments, and more within Dynatrace.  For additional monitoring of Ansible, check out the Ansible Telegraf module for Dynatrace.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Works on Linux and Windows target hosts.
+Requires only the (native) uri or win_uri modules.
+Dynatrace OneAgent v1.201+
+OneAgent metric API enabled on target hosts.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+### dynatrace (dt) variables
+dt_metrics_ingest_url: http://localhost:14499/metrics/ingest
+dt_metrics_group: default
+dt_metrics_name: default
+### ansible (awx) variables
+awx_job_type: default
+awx_job_id: 0
+awx_job_template: default
+awx_job_launch_type: default
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No external role dependencies
 
 Example Playbook
 ----------------
