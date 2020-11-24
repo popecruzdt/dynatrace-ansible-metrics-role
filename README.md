@@ -18,6 +18,7 @@ Role Variables
 * dt_metrics_ingest_url: http://localhost:14499/metrics/ingest -> http endpoint for OneAgent metric API
 * dt_metrics_group: default -> metric group (ansible.group-name.metric-name)
 * dt_metrics_name: default -> metric name (ansible.group-name.metric-name)
+* dt_metrics_value: 1 -> metric value
 ### ansible (awx) variables
 * awx_job_type: default -> the type of job (i.e. deployment, change, configuration, patching, etc) used for reporting
 * awx_job_id: 0 -> the id of the job

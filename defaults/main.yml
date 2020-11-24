@@ -3,7 +3,8 @@
 # dynatrace (dt) variables
 dt_metrics_ingest_url: http://localhost:14499/metrics/ingest
 dt_metrics_group: default
-dt_metrics_name: default 
+dt_metrics_name: default
+dt_metrics_value: 1
 # ansible (awx) variables
 awx_job_type: default
 awx_job_id: 0
