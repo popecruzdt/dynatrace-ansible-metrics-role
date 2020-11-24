@@ -6,10 +6,10 @@ This role enables you to send metrics about Ansible (Tower) job/playbook executi
 Requirements
 ------------
 
-Works on Linux and Windows target hosts.
-Requires only the (native) uri or win_uri modules.
-Dynatrace OneAgent v1.201+
-OneAgent metric API enabled on target hosts.
+* Works on Linux and Windows target hosts.
+* Requires only the (native) uri or win_uri modules.
+* Dynatrace OneAgent v1.201+
+* OneAgent metric API enabled on target hosts.
 
 Role Variables
 --------------
