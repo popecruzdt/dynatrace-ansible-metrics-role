@@ -16,14 +16,14 @@ Role Variables
 
 ### dynatrace (dt) variables
 * dt_metrics_ingest_url: http://localhost:14499/metrics/ingest -> http endpoint for OneAgent metric API
-* dt_metrics_group: default -> metric group (ansible.group-name.metric-name)
-* dt_metrics_name: default -> metric name (ansible.group-name.metric-name)
-* dt_metrics_value: 1 -> metric value
+* dt_metrics_group: default -> metric group (ansible.group-name.metric-name) [see restrictions](https://www.dynatrace.com/support/help/shortlink/metric-ingestion-protocol#metric-key-required)
+* dt_metrics_name: default -> metric name (ansible.group-name.metric-name) [see restrictions](https://www.dynatrace.com/support/help/shortlink/metric-ingestion-protocol#metric-key-required)
+* dt_metrics_value: 1 -> metric value [see restrictions](https://www.dynatrace.com/support/help/shortlink/metric-ingestion-protocol#payload-required)
 ### ansible (awx) variables
 * awx_job_type: default -> the type of job (i.e. deployment, change, configuration, patching, etc) used for reporting
-* awx_job_id: 0 -> the id of the job
-* awx_job_template: default -> the job template
-* awx_job_launch_type: default -> the method in which the job was launched
+* awx_job_id: 0 -> the id of the job (auto-populated when using Ansible Tower)
+* awx_job_template: default -> the job template (auto-populated when using Ansible Tower)
+* awx_job_launch_type: default -> the method in which the job was launched (auto-populated when using Ansible Tower)
 
 Dependencies
 ------------
