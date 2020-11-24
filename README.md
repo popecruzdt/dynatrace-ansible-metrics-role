@@ -1,7 +1,7 @@
 dynatrace-ansible-metrics-role
 =========
 
-This role enables you to send metrics about Ansible (Tower) job/playbook execution to Dynatrace.  Add the role as tasks within your playbook and specify the metric group and metric name as variables.  Use this to monitor Ansible job executions, failures, changes, deployments, and more within Dynatrace.  For additional monitoring of Ansible, check out the [Ansible Telegraf module](https://github.com/barrebre/goScrapeAnsibleMetrics), which can be used with Dynatrace.
+This role enables you to send metrics about Ansible (Tower) job/playbook execution to Dynatrace.  Add the role as tasks within your playbook and specify the metric group and metric name as variables.  Use this to monitor Ansible job executions, failures, changes, deployments, and more within Dynatrace.  For additional monitoring of Ansible, check out the [Ansible Tower Metrics Parser](https://github.com/barrebre/goScrapeAnsibleMetrics), which can be used to send more metrics to Dynatrace.
 
 Requirements
 ------------
