@@ -6,7 +6,7 @@ dt_metrics_group: default
 dt_metrics_name: default
 dt_metrics_value: 1
 # ansible (awx) variables
-awx_job_type: default
-awx_job_id: 0
-awx_job_template: default
-awx_job_launch_type: default
+job_type: default
+job_id: "{{ tower_job_id }}"
+job_template: "{{ tower_job_template_name }}"
+job_launch_type: "{{ tower_job_launch_type }}"

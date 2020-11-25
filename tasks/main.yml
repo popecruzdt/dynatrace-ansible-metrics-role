@@ -6,7 +6,7 @@
     method: POST
     headers:
       content-type: "text/plain; charset=utf-8"
-    body: "ansible.{{ dt_metrics_group }}.{{ dt_metrics_name }},type=\"{{ awx_job_type }}\",id=\"{{ awx_job_id }}\",template=\"{{ awx_job_template }}\",launch=\"{{ awx_job_launch_type }}\" {{ dt_metrics_value }}"
+    body: "ansible.{{ dt_metrics_group }}.{{ dt_metrics_name }},type=\"{{ job_type }}\",id=\"{{ job_id }}\",template=\"{{ job_template }}\",launch=\"{{ job_launch_type }}\" {{ dt_metrics_value }}"
     status_code: 202
   ignore_errors: yes
   when: ansible_system == "Linux"
@@ -16,7 +16,7 @@
     method: POST
     headers:
       content-type: "text/plain; charset=utf-8"
-    body: "ansible.{{ dt_metrics_group }}.{{ dt_metrics_name }},type=\"{{ awx_job_type }}\",id=\"{{ awx_job_id }}\",template=\"{{ awx_job_template }}\",launch=\"{{ awx_job_launch_type }}\" {{ dt_metrics_value }}"
+    body: "ansible.{{ dt_metrics_group }}.{{ dt_metrics_name }},type=\"{{ job_type }}\",id=\"{{ job_id }}\",template=\"{{ job_template }}\",launch=\"{{ job_launch_type }}\" {{ dt_metrics_value }}"
     status_code: 202
   ignore_errors: yes
   when: ansible_system == "Windows"
